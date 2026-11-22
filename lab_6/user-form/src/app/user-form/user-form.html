@@ -1,0 +1,32 @@
+<h2>User Registration Form</h2>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<label>Name:</label><br>
+<input type="text" formControlName="name">
+@if (userForm.controls.name.invalid && 
+(userForm.controls.name.touched ||submitted)) {
+<p style="color:red">
+@if (userForm.controls.name.errors?.['required']) { 
+Name is required.
+}
+@if (userForm.controls.name.errors?.['minlength']) { 
+Name must contain at least 3 characters.
+}
+</p>
+}
+<br>
+<label>Email:</label><br>
+<input type="text" formControlName="email">
+@if (userForm.controls.email.invalid && 
+(userForm.controls.email.touched ||submitted)) {
+<p style="color:red">
+@if (userForm.controls.email.errors?.['required']) { 
+Email is required.
+}
+@if (userForm.controls.email.errors?.['email']) { 
+Enter a valid email address.
+}
+</p>
+}
+<br>
+<button type="submit">Add User</button>
+</form>
