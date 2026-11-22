@@ -1,0 +1,8 @@
+<h3>Users from Mock API</h3>
+<ul>
+  @for (user of users(); track user.id) {
+    <li>{{ user.name }} - {{ user.email }}</li>
+  }
+</ul>
+
+<router-outlet />

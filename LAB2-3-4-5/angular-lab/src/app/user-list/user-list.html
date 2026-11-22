@@ -1,0 +1,7 @@
+<h3>User List</h3>
+@for (u of users; track u.id) {
+  <p>
+    {{ u.name }} 
+    <a [routerLink]="['/users', u.id]">View Details</a>
+  </p>
+}
