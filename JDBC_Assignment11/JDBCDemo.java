@@ -5,8 +5,8 @@ public class JDBCDemo {
     public static void main(String[] args) {
 
         String url = "jdbc:mysql://localhost:3306/studentdb";
-        String user = "root";
-        String password = "rahat";
+        String user = "jdbcuser";
+        String password = "jdbc123";
 
         try {
 
